@@ -15,6 +15,20 @@ public class Pelota extends Actor
     {
         incx = 10;
         incy = 10;
+        int x = Greenfoot.getRandomNumber(10);
+        int y = Greenfoot.getRandomNumber(10);
+        if(x <= 5){
+            x = 1;
+        }
+        else{
+            x =-1;
+        }
+        if(y <= 5){
+            y = 1;
+        }
+        else{
+            y = -1;
+        }
     }
     
     @Override
@@ -26,7 +40,7 @@ public class Pelota extends Actor
         
         //calcula las nuevas coords
         int nuevox = posx + incx;
-        int nuevoy = posx + incy;
+        int nuevoy = posy + incy;
         
         World mundo = this.getWorld();
         if(nuevox > mundo.getWidth()) //rebota derecho
@@ -50,5 +64,5 @@ public class Pelota extends Actor
         }
         //cambiamos de posicion a la pelota
         this.setLocation(nuevox, nuevoy);
-    }    
+    }       
 }

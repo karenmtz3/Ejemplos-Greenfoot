@@ -16,7 +16,7 @@ public class Escenario extends World
     public Escenario()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1, true); 
+        super(600, 400, 1,true); 
     }
     
     @Override
@@ -26,10 +26,9 @@ public class Escenario extends World
         {
             //System.out.println("Click en el mundo");
             MouseInfo raton = Greenfoot.getMouseInfo();
-           // System.out.println("Coords x = "+raton.getX() +
-            //"Coordenadas y = " + raton.getY());
-            Pelota pelota = new Pelota();
-            super.addObject(pelota,raton.getX(), raton.getY());
+            //System.out.printn("Coord x = "+raton.getX() + "Coord y = "+ raton.getY());
+            Pelota ball = new Pelota();
+            super.addObject(ball, raton.getX(), raton.getY());
         }
     }
 }
